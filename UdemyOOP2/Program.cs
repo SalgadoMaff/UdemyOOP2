@@ -25,6 +25,17 @@ switch (op) {
         Console.WriteLine($"DIAGONAL = {retangulo.Diagonal().ToString("F2", CultureInfo.InvariantCulture)}");
         break;
     case 2:
+        Funcionario funcionario = new Funcionario();
+        Console.Write("Nome: ");
+        funcionario.Nome = Console.ReadLine();
+        Console.Write("\nSalário bruto: ");
+        funcionario.SalarioBruto = double.Parse(Console.ReadLine(),CultureInfo.InvariantCulture);
+        Console.Write("\nImposto: ");
+        funcionario.Imposto = double.Parse(Console.ReadLine(),CultureInfo.InvariantCulture);
+        Console.WriteLine($"\nFuncionário: {funcionario.Nome}, $ {funcionario.SalarioLiquido().ToString("F2",CultureInfo.InvariantCulture)}");
+        Console.Write("\nDigite a porcentagem para aumentar o salário: ");
+        funcionario.AumentarSalario(double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture));
+        Console.WriteLine($"\nFuncionário: {funcionario.Nome}, $ {funcionario.SalarioLiquido().ToString("F2", CultureInfo.InvariantCulture)}");
 
         break;
     case 3: 
