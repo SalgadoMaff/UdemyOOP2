@@ -56,6 +56,11 @@ switch (op) {
         }
         break;
     case 4:
+        Console.Write("Cotação do dólar: ");
+        double cot = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+        Console.Write("Quantos dolares vai comprar: ");
+        double qtd = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+        Console.WriteLine($"Valor a ser pago: R${(ConversorMoeda.DolarToReal(cot,qtd).ToString("F2", CultureInfo.InvariantCulture))}");
         break;
     default:
         break;
